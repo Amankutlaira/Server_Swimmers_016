@@ -1,10 +1,7 @@
-* {
-    margin: 0;
-    padding: o;
-}
 
 
-.container {
+
+.social {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
@@ -17,7 +14,7 @@
     padding: 20px;
 }
 
-.cards {
+.social_cards {
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
@@ -38,11 +35,15 @@
   }
 
 .cards img {
-    border-radius: 40%;
+    border-radius: 50%;
     /* margin-bottom: 20px; */
     position: relative;
     bottom: 50px;
 
+}
+
+.card #logo{
+    border-radius: none;
 }
 
 .cards div {
@@ -54,5 +55,22 @@
 }*/
 
 .cards #logo {
-    margin-top: 40px;
+    margin-top: 90px;
 } 
+
+
+
+@media screen and (max-width: 768px) {
+    .social {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .social {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
