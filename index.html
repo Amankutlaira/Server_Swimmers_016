@@ -21,7 +21,7 @@
   <!-- =======================================================================================  -->
   <!-- =========================================  Aman ======================================== -->
   <!-- ======================================================================================== -->
-  <header>
+  <header style="display: none;">
     <video autoplay loop muted plays-inline id="bckgrd-video">
       <source src="/assets/images/homepage-hero-bg-video.mp4" />
     </video>
@@ -54,7 +54,7 @@
 
 
   <!-- main beniffits container starts here -->
-  <div class="benifit-container">
+  <div class="benifit-container" style="display: none;">
     <!-- this the upper heading and main cards div -->
     <div class="upper-benifits">
       <h2>Benifits of the Tech Confrences.</h2>
@@ -142,7 +142,7 @@
     </div>
     <hr>
 
-    <div class="lower-benifits">
+    <div class="lower-benifits" style="display: none;">
       <h2>Trusted by over 900 companies</h2>
       <div class="logos">
         <div class="logo-slide">
@@ -221,45 +221,46 @@
   <!-- ======================================================================================== -->
 
   <div class="container  mx-auto px-4 section11">
+    <div class="subSection">
+      <h3>Run live meetings, face to face experiences, in-person events, or virtual webinars with the award winning
+        InEvent platform</h3>
 
-    <h3>Run live meetings, face to face experiences, in-person events, or virtual webinars with the award winning
-      InEvent platform</h3>
+      <div class="owl-carousel owl-theme owl-loaded px-4">
+        <div class="owl-stage-outer">
+          <div class="owl-nav flex justify-between absolute buttonsCarousal sm:flex">
+            <div class=" customPrevBtn"> <i class="fa fa-light fa-angle-left" aria-hidden="true"></i> </div>
+            <div class=" customNextBtn"> <i class="fa fa-light fa-angle-right" aria-hidden="true"></i> </div>
+  
+          </div>
+          <div class="owl-stage">
 
-    <div class="owl-carousel owl-theme owl-loaded px-4">
-      <div class="owl-stage-outer">
-        <div class="owl-stage">
 
+            <div class="owl-item flex">
+              <img src="./assets/images/Screenshot 2024-08-29 003852.png">
+            </div>
+            <div class="owl-item flex">
+              <img src="./assets/images/Screenshot 2024-08-29 005411.png">
+            </div>
+            <div class="owl-item flex">
+              <img src="./assets/images/Screenshot 2024-08-29 005424.png">
+            </div>
+            <div class="owl-item flex">
+              <img src="./assets/images/Screenshot 2024-08-29 005432.png">
+            </div>
+            <div class="owl-item flex">
+              <img src="./assets/images/Screenshot 2024-08-29 005448.png">
+            </div>
+            <div class="owl-item flex">
+              <img src="./assets/images/Screenshot 2024-08-29 005503.png">
+            </div>
 
-          <div class="owl-item flex">
-            <img src="./assets/images/Screenshot 2024-08-29 003852.png">
           </div>
-          <div class="owl-item flex">
-            <img src="./assets/images/Screenshot 2024-08-29 005411.png">
-          </div>
-          <div class="owl-item flex">
-            <img src="./assets/images/Screenshot 2024-08-29 005424.png">
-          </div>
-          <div class="owl-item flex">
-            <img src="./assets/images/Screenshot 2024-08-29 005432.png">
-          </div>
-          <div class="owl-item flex">
-            <img src="./assets/images/Screenshot 2024-08-29 005448.png">
-          </div>
-          <div class="owl-item flex">
-            <img src="./assets/images/Screenshot 2024-08-29 005503.png">
-          </div>
-
         </div>
+        
       </div>
-      <div class="owl-nav flex justify-between absolute buttonsCarousal">
-        <div class=" customPrevBtn"> <i class="fa fa-light fa-angle-left" aria-hidden="true"></i> </div>
-        <div class=" customNextBtn"> <i class="fa fa-light fa-angle-right" aria-hidden="true"></i> </div>
 
-      </div>
+
     </div>
-
-
-
   </div>
 
   <!-- =======================================================================================  -->
@@ -269,7 +270,7 @@
   <!-- =======================================================================================  -->
   <!-- =========================================           ==================================== -->
   <!-- ======================================================================================== -->
-  <div class="container">
+  <div class="container" style="display: none;">
     <div class="cards">
       <img width="90px" src="https://static.inevent.com/images/testimonial-danielle-snow.webp" alt="Danielle Snow" />
       <h1>Danielle Snow</h1>
@@ -383,7 +384,7 @@
   <!-- =========================================     END      ==================================== -->
   <!-- ======================================================================================== -->
 
- 
+
 
 
   <script src="/assets/lib/jquery.min.js"></script>
@@ -396,7 +397,13 @@
       margin: 20,
       dots: false,
       responsive: {
+        0:{
+          items: 2
+        },
         600: {
+          items: 3
+        },
+        1000: {
           items: 5
         }
       }
