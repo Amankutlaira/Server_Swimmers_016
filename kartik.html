@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .booking-form {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .booking-form h2 {
+            margin-bottom: 20px;
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .booking-form label span {
+            color: red;
+            margin-left: 5px;
+        }
+        .booking-form input,
+        .booking-form select,
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            background-color: #24aae3;
+            color: #fff;
+            border: none;
+        }
+        .booking-form button:hover {
+            background-color: #1a4a5e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="booking-form">
+    <h1>Book a Show</h1>
+    <form>
+        <label for="name">Name<span>*</span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email<span>*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number<span>*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="show">Select Show<span>*</span></label>
+        <select id="show" name="show" required>
+            <option value="show1">Show 1</option>
+            <option value="show2">Show 2</option>
+            <option value="show3">Show 3</option>
+        </select>
+
+        <label for="date">Select Date<span>*</span></label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+</body>
+</html>
