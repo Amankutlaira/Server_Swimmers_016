@@ -178,15 +178,27 @@ nav:hover {
   padding: 3.5rem 0;
 }
 
+.subSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.owl-carousel{
+  width: 1200px;
+    margin: auto;
+}
 .owl-carousel .owl-stage {
-  height: 550px;
-  padding: 86px 0 0 0;
+  /* height: 550px; */
+  padding: 86px 0 86px 0;
   box-shadow: rgba(255, 255, 255, 0.3) 105px 0px 60px -12px inset, rgba(255, 255, 255, 0.3) -105px 0px 60px 12px inset;
 }
 .buttonsCarousal{
   width: 100%;
   top: 0;
   height: 100%;
+  z-index: 2;
+  display: none;
 }
 .customNextBtn{
   font-size:100px;
