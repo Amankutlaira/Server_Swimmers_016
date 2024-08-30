@@ -292,49 +292,52 @@
     <!-- =========================================   END  ==================================== -->
     <!-- ======================================================================================== -->
 
-    <!-- =======================================================================================  -->
-    <!-- =========================================           ==================================== -->
-    <!-- ======================================================================================== -->
+  <!-- =======================================================================================  -->
+  <!-- =========================================  SARVAM  ==================================== -->
+  <!-- ======================================================================================== -->
 
-    <div class="container mx-auto px-4 section11">
-      <h3>
-        Run live meetings, face to face experiences, in-person events, or
-        virtual webinars with the award winning InEvent platform
-      </h3>
+  <div class="container  mx-auto px-4 section11">
+    <div class="subSection">
+      <h3>Run live meetings, face to face experiences, in-person events, or virtual webinars with the award winning
+        InEvent platform</h3>
 
-      <div class="owl-carousel owl-theme owl-loaded px-4">
+      <div class="owl-carousel carousel_outer owl-theme owl-loaded px-4">
         <div class="owl-stage-outer">
+          <div class="owl-nav flex justify-between absolute buttonsCarousal sm:flex">
+            <div class=" customPrevBtn"> <i class="fa fa-light fa-angle-left" aria-hidden="true"></i> </div>
+            <div class=" customNextBtn"> <i class="fa fa-light fa-angle-right" aria-hidden="true"></i> </div>
+  
+          </div>
           <div class="owl-stage">
+
+
             <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 003852.png" />
+              <img src="./assets/images/Screenshot 2024-08-29 003852.png">
             </div>
             <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005411.png" />
+              <img src="./assets/images/Screenshot 2024-08-29 005411.png">
             </div>
             <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005424.png" />
+              <img src="./assets/images/Screenshot 2024-08-29 005424.png">
             </div>
             <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005432.png" />
+              <img src="./assets/images/Screenshot 2024-08-29 005432.png">
             </div>
             <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005448.png" />
+              <img src="./assets/images/Screenshot 2024-08-29 005448.png">
             </div>
             <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005503.png" />
+              <img src="./assets/images/Screenshot 2024-08-29 005503.png">
             </div>
+
           </div>
         </div>
-        <div class="owl-nav flex justify-between absolute buttonsCarousal">
-          <div class="customPrevBtn">
-            <i class="fa fa-light fa-angle-left" aria-hidden="true"></i>
-          </div>
-          <div class="customNextBtn">
-            <i class="fa fa-light fa-angle-right" aria-hidden="true"></i>
-          </div>
-        </div>
+        
       </div>
+
+
     </div>
+  </div>
 
     <!-- =======================================================================================  -->
     <!-- =========================================    END   ==================================== -->
@@ -530,32 +533,43 @@
     <div class="container">
     </div>
 
-    <!-- =======================================================================================  -->
-    <!-- =========================================     END      ==================================== -->
-    <!-- ======================================================================================== -->
+  <!-- =======================================================================================  -->
+  <!-- =========================================     END      ==================================== -->
+  <!-- ======================================================================================== -->
 
-    <script src="/assets/lib/jquery.min.js"></script>
-    <script src="/assets/lib/owlCarousel/owl.carousel.min.js"></script>
-    <script>
-      $(".owl-carousel").owlCarousel({
-        center: true,
-        items: 1,
-        loop: true,
-        margin: 20,
-        dots: false,
-        responsive: {
-          600: {
-            items: 5,
-          },
+
+
+
+  <script src="/assets/lib/jquery.min.js"></script>
+  <script src="/assets/lib/owlCarousel/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      center: true,
+      items: 1,
+      loop: true,
+      margin: 20,
+      dots: false,
+      autoplay: true,
+      responsive: {
+        0:{
+          items: 2
         },
-      });
-      var owl = $(".owl-carousel");
-      $(".customNextBtn").click(function () {
-        owl.trigger("next.owl.carousel");
-      });
-      $(".customPrevBtn").click(function () {
-        owl.trigger("prev.owl.carousel", [300]);
-      });
-    </script>
-  </body>
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    });
+    var owl = $('.owl-carousel');
+    $('.customNextBtn').click(function () {
+      owl.trigger('next.owl.carousel');
+    })
+    $('.customPrevBtn').click(function () {
+      owl.trigger('prev.owl.carousel', [300]);
+    })
+  </script>
+</body>
+
 </html>

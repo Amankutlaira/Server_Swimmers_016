@@ -151,7 +151,7 @@ nav:hover {
 }
 
 /* Sarvam */
-.owl-item {
+.carousel_outer .owl-item {
   background-color: black;
   border: 3px solid rgb(102, 102, 102);
   border-radius: 18px;
@@ -160,7 +160,7 @@ nav:hover {
   /* width: 250px !important; */
 }
 
-.owl-item.center {
+.carousel_outer .owl-item.center {
   transform: scale(1.3) !important;
   z-index: 5;
   border: 3px solid rgb(0, 162, 255);
@@ -178,15 +178,27 @@ nav:hover {
   padding: 3.5rem 0;
 }
 
-.owl-carousel .owl-stage {
-  height: 550px;
-  padding: 86px 0 0 0;
+.subSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.owl-carousel.carousel_outer{
+  width: 1200px;
+    margin: auto;
+}
+.owl-carousel.carousel_outer .owl-stage {
+  /* height: 550px; */
+  padding: 86px 0 86px 0;
   box-shadow: rgba(255, 255, 255, 0.3) 105px 0px 60px -12px inset, rgba(255, 255, 255, 0.3) -105px 0px 60px 12px inset;
 }
 .buttonsCarousal{
   width: 100%;
   top: 0;
   height: 100%;
+  z-index: 2;
+  display: none;
 }
 .customNextBtn{
   font-size:100px;
