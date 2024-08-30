@@ -381,7 +381,7 @@ nav:hover {
   height: 100vh;
   margin: 0;
 } */
-.booking-form {
+/* .booking-form {
   background-color: #fff;
   padding: 50px;
   border-radius: 10px;
@@ -415,16 +415,16 @@ nav:hover {
 }
 .booking-form button:hover {
   background-color: #1a4a5e;
-}
+} */
 
 /* Sarvam */
-.carousel_outer .owl-item {
+/* .carousel_outer .owl-item {
   background-color: black;
   border: 3px solid rgb(102, 102, 102);
   border-radius: 18px;
   overflow: hidden;
   transition: transform 0.5s;
-  /* width: 250px !important; */
+  width: 250px !important; 
 }
 
 .carousel_outer .owl-item.center {
@@ -456,7 +456,7 @@ nav:hover {
     margin: auto;
 }
 .owl-carousel.carousel_outer .owl-stage {
-  /* height: 550px; */
+  height: 550px; 
   padding: 86px 0 86px 0;
   box-shadow: rgba(255, 255, 255, 0.3) 105px 0px 60px -12px inset, rgba(255, 255, 255, 0.3) -105px 0px 60px 12px inset;
 }
@@ -484,7 +484,7 @@ nav:hover {
   align-items: center;
   display: flex;
   justify-content: center;
-}
+} */
 
 /* kartik */
 
