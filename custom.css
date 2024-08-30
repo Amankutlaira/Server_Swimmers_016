@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body,
@@ -28,6 +27,9 @@ html {
 header {
   position: relative;
   z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 nav {
@@ -36,9 +38,11 @@ nav {
   align-items: center;
   width: 100%;
   padding: 30px 60px;
-  position: relative;
+  position: fixed;
   background-color: transparent;
   box-sizing: border-box;
+  top: 0;
+  z-index: 3;
 }
 
 nav:hover {
@@ -48,6 +52,7 @@ nav:hover {
 .logo {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .logo img {
@@ -101,4 +106,135 @@ nav:hover {
 .meeting-button:hover {
   background-color: darkblue;
   color: white;
+}
+
+.hero-p .hero-head {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 6em;
+  font-weight: 700;
+  z-index: 2;
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  background: radial-gradient(circle, #147199 0, #04153a 65%, #308cb4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-p p {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 4.5em;
+  font-family: "Open Sans", sans-serif;
+  z-index: 2;
+}
+
+.hero-p p .word {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: rgb(126, 202, 209);
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-p p .word .letter {
+  transform-origin: center center 25px;
+}
+
+.hero-p p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.hero-p p .word .letter.in {
+  transition: 0.38s ease;
+}
+
+.hero-p p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+@media (max-width: 1200px) {
+  .hero-p .hero-head {
+    font-size: 3em;
+  }
+
+  .hero-p p {
+    font-size: 2.5em;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    padding: 6px 12px;
+  }
+
+  .meeting-button {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  .hero-p .hero-head {
+    font-size: 2.5em;
+  }
+
+  .hero-p p {
+    font-size: 2em;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-p .hero-head {
+    font-size: 2em;
+    top: 30%;
+  }
+
+  .hero-p p {
+    font-size: 1.5em;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .meeting-button {
+    padding: 5px 10px;
+  }
 }
