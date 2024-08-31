@@ -13,7 +13,7 @@
     /* background-color: aquamarine; */
     /* border: 2px solid rgb(225, 21, 21); */
     width: 100%;
-    height: auto;
+    
     box-sizing: border-box;
     padding: 20px;
 }
@@ -28,6 +28,7 @@
     margin-top: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 15px;
+    height: 95vh !important;
 }
 
 .social_cards:hover {
@@ -43,22 +44,21 @@
 }
 
 .social_cards>img {
-    border-radius: 40%;
+    border-radius: 50%;
+    width: 100px !important;
+
     /* margin-bottom: 20px; */
     position: relative;
     bottom: 50px;
 
 }
-.social_description {
-    /* font-size: x-large; */
-}
 
 .social_cards div {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .comma{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .comma.end {
     text-align: end;
@@ -67,20 +67,29 @@
     margin-top: 30px;
 } 
 
+.social_cards #logo img {
+    width: 100px !important;
+}
+
 .social_parent button {
     font-size: x-large;
     font-weight: 700;
     padding: 15px;
-    margin: 50px auto;
-    background-color: rgb(160, 69, 44);
-    border: none;
+    margin:50px;
+    /* background-color: rgb(78, 87, 166); */
+    /* border: none; */
     border-radius: 12px;
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.social_parent button:hover{
+    background-color: #000000;
+    color: #fff;
 }
 
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .social {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -93,7 +102,7 @@
         display: grid;
         grid-template-columns: 1fr;
     }
-}
+} */
 
 
 
@@ -128,7 +137,6 @@
     font-size: 40px;
     font-weight: bold;
     color: blue;
-    /* border: 2px solid black; */
     padding: 15px;
     /* text-align: start; */
 }
@@ -162,5 +170,16 @@
     border-radius: 12px;
 }
 
+
+.list_part {
+    text-align: left;
+    padding: 20px;
+}
+
+.list_part ul {
+    display: inline-block;
+    text-align: left;
+    list-style:disc ;
+}
 
 
