@@ -105,28 +105,35 @@ nav:hover {
 
 /* kartik */
 
-/* body {
+.page-container{
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-image: url('https://t3.ftcdn.net/jpg/06/46/75/22/360_F_646752205_PoQ6a23xICXTvrDeWFAc5ETCSTefzjad.jpg'); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-} */
-.booking-form {
-  background-color: #fff;
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
 }
-.booking-form h2 {
+.booking-form {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  width: 500px;
+  color: #fff; /* White text */
+}
+.booking-form h1 {
+  text-align: center;
   margin-bottom: 20px;
 }
 .booking-form label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 .booking-form label span {
   color: red;
@@ -138,18 +145,20 @@ nav:hover {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent input fields */
+  color: #333; /* Dark text in inputs */
 }
 .booking-form button {
   background-color: #24aae3;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 .booking-form button:hover {
   background-color: #1a4a5e;
 }
-
 /* Sarvam */
 .owl-item {
   background-color: black;
@@ -206,3 +215,4 @@ nav:hover {
   display: flex;
   justify-content: center;
 }
+
