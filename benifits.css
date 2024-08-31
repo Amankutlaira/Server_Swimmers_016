@@ -1,50 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-*{
-    margin: 0
+* {
+  margin: 0;
 }
-body{
-    font-family: 'Open Sans';
+body {
+  font-family: "Open Sans";
 }
-hr{
-    position: relative;
-    top: 2.5%;
-    color: grey;
-    margin-top: 5rem;
+hr {
+  position: relative;
+  top: 2.5%;
+  color: grey;
+  margin-top: 5rem;
+}
 
+.benifit-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 4em;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("https://static.inevent.com/images/home-white-bg.webp"); /* Path to your image */
+  background-size: cover; /* Scale the image to cover the entire div */
+  background-position: center; /* Center the image in the div */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.upper-benifits {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  /* margin-top: .5em; */
+  justify-content: center;
+  align-items: center;
+  /* line-height: 3em; */
+  padding-top: 0em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.fade-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.benifit-container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    background-image: url('https://static.inevent.com/images/home-white-bg.webp'); /* Path to your image */
-    background-size: cover; /* Scale the image to cover the entire div */
-    background-position: center; /* Center the image in the div */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out;
 }
-.upper-benifits{
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    height: 70%;
-    flex-direction: column;
-    /* margin-top: .5em; */
-    justify-content: center;
-    align-items: center;
-    /* line-height: 3em; */
-    padding-top: 0em;
-    padding-left: 1em;
-    padding-right: 1em;
+
+.vanish {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
-.upper-benifits  h2{
+.animate-appear {
+  animation: appear 1.3s ease-in-out;
+}
+/* .upper-benifits  .head-fade{
     font-size: 1.8em;
     font-weight: 700;
-    align-items: center;
+    text-align: center;
+    animation: fadeUp 1s ease-out;
 }
-.b-cont{
+.opacity-0 {
+    opacity: 0;
+} */
+/* .b-cont{
     width: 100%;
     overflow: hidden;
     margin-bottom: .5em;
@@ -57,55 +78,68 @@ hr{
     align-content: center;   
     padding: 1em 15em;
     
-    /* border: 1PX solid black; */
+    border: 1PX solid black;
+} */
+.b-card {
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin-top: 2em;
+  height: 38em;
+  display: flex;
+  flex-direction: column;
 }
-.b-card{
-    /* border: 1px solid pink; */
-    padding: .5em;
-    box-sizing: border-box;
-    width: 22em;
-    margin-top: 2em;
-    height: 38em;
-    display: flex;
-    flex-direction: column;
+.b-content {
+  height: 100%;
+  position: relative;
+  margin-bottom: 2.2em;
+  /* height: 500px; Set the height of the div */
+  background-image: url("https://www.businessinsider.in/_next/image?url=https%3A%2F%2Fstaticbiassets.in%2Fthumb%2Fmsid-98045150%2Cwidth-700%2Cresizemode-4%2Cimgsize-776712%2Fimg63f015875ca81e0018556749.jpg&w=640&q=75"); /* Path to your image */
+  background-size: cover; /* Scale the image to cover the entire div */
+  background-position: center; /* Center the image in the div */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  overflow: hidden;
+  border-radius: 16px;
 }
-.b-content{
-    height: 100%;
-    position: relative;
-    margin-bottom: 2.2em;
-    /* height: 500px; Set the height of the div */
-    background-image: url('https://static.inevent.com/images/home-solutions-in-person-events-v4.webp'); /* Path to your image */
-    background-size: cover; /* Scale the image to cover the entire div */
-    background-position: center; /* Center the image in the div */
-    background-repeat: no-repeat; /* Prevent the image from repeating */  
-    overflow: hidden;
-    border-radius: 16px;
+.b-cont .b-card:nth-child(2) > .b-content {
+  background-image: url("https://static.inevent.com/images/home-solutions-virtual-event-v2.webp"); /* Path to your image */
 }
-.b-cont .b-card:nth-child(2) > .b-content{
-    background-image: url('https://static.inevent.com/images/home-solutions-virtual-event-v2.webp'); /* Path to your image */
+.b-cont .b-card:nth-child(3) > .b-content {
+  background-image: url("https://azevedorafaela.com/wp-content/uploads/2024/06/wanttobuildinwe3.jpg?w=1024"); /* Path to your image */
 }
-.b-cont .b-card:nth-child(3) > .b-content{
-    background-image: url('https://static.inevent.com/images/home-solutions-hybrid-event.webp'); /* Path to your image */
-}
-.b-cont .b-card:nth-child(4) > .b-content{
-    background-image: url('https://static.inevent.com/images/home-solutions-webinar-v3.webp'); /* Path to your image */
+.b-cont .b-card:nth-child(4) > .b-content {
+  background-image: url("https://pbs.twimg.com/media/GMlHVBKWQAAlF_B?format=jpg&name=small"); /* Path to your image */
 }
 .b-text {
-    position: absolute;
-    
-    height: 100%;
-    padding: 0 1em;
-    color: aliceblue;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with 60% opacity */
-    opacity: 0; /* Initially invisible */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 1s ease, visibility .8s ease; /* Smooth transition for both appearance and disappearance */
+  position: absolute;
+  height: 100%;
+  padding: 0 1em;
+  color: aliceblue;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with 60% opacity */
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 1s ease, visibility 0.8s ease; /* Smooth transition for both appearance and disappearance */
 }
-
-.b-content:hover .b-text {
+@media screen and (max-width: 770px) {
+  .b-text {
     opacity: 1; /* Fully visible */
     visibility: visible; /* Make it visible */
+  }
+  .b-content .b-slider {
+    top: 98%;
+    background-color: rgb(59, 158, 230);
+  }
+  .upper-benifits .head-fade {
+    text-align: center;
+    font-size: 1.6em;
+  }
+  .b-card #learn-btn {
+    background-color: rgb(59, 158, 230);
+  }
+}
+.b-content:hover .b-text {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Make it visible */
 }
 
 /* Define the fade-in animation
@@ -113,112 +147,139 @@ hr{
     from { opacity: 0; }
     to { opacity: 1; }
     } */
-    
-    .b-text h3{
-        font-size: 1.7em;
-        margin: 1em 0;
-    }
-    .b-text p{
-        font-size:17px;
-    }
-    .b-slider{
-        width: 100%;
-        height: 18%;
-        z-index: 1000;
-        background-color: rgb(42, 51, 60);
-        position: absolute;
-        top:82%;
-        transition: top .8s ease-in-out, background-color .8s ease-in-out;
-    }
-    .b-content:hover .b-slider{
-        top: 98%;
-        background-color: rgb(59, 158, 230);
-    }
-    .b-slider h3{
-        color: white;
-        text-align: center;
-        font-size: 1.4em;
-        line-height: 3.5em;
-        opacity: 1;
-        transition: opacity .7s ease
-        
-    }
-    .b-content:hover .b-slider h3 {
-        opacity: 0;
-    }
-    #learn-btn{
-        /* border: 1px solid rebeccapurple; */
-        background-color: rgb(42, 51, 60);
-        color: aliceblue;
-        font-size: 1em;
-        font-weight: 700;
-        width: fit-content;
-        padding: .8em 2.6em;
-        border-radius: 80px;
-        margin :0 auto ;
-        transition: background-color .2s ease-in;
-    }
-    .b-card:hover #learn-btn{
-        background-color: rgb(59, 158, 230);
-    }
-    /* upper benifits end here */
-    
-    /* company slider startsfrom here */
-    
-    @keyframes slide {
-        from{
-            transform: translateX(0);
-        }
-        to{
-            transform: translateX(-100%);
-        }
-    }
 
-    .lower-benifits {
-        /* border: 1px solid black; */
-        display: flex;
-        flex-direction: column;
-        margin-top: 2em;
-        
-        
-    }
-    .lower-benifits h2{
-        text-align: center;
-        font-size: 1.8em;
-        font-weight: 700;
-        align-items: center;
-    }
-   .logos {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    padding: 60px 0 0 0;
-    box-sizing: border-box;
+.b-text h3 {
+  font-size: 1.7em;
+  margin: 1em 0;
+}
+.b-text p {
+  font-size: 17px;
+}
+.b-slider {
+  width: 100%;
+  height: 18%;
+  z-index: 1000;
+  background-color: rgb(42, 51, 60);
+  position: absolute;
+  top: 82%;
+  transition: top 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+.b-content:hover .b-slider {
+  top: 98%;
+  background-color: rgb(59, 158, 230);
+}
+.b-slider h3 {
+  color: white;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 3.5em;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+.b-content:hover .b-slider h3 {
+  opacity: 0;
+}
+#learn-btn {
+  /* border: 1px solid rebeccapurple; */
+  background-color: rgb(42, 51, 60);
+  color: aliceblue;
+  font-size: 1em;
+  font-weight: 700;
+  width: fit-content;
+  padding: 0.8em 2.6em;
+  border-radius: 80px;
+  margin: 0 auto;
+  transition: background-color 0.2s ease-in;
+}
+.b-card:hover #learn-btn {
+  background-color: rgb(59, 158, 230);
+}
+/* upper benifits end here */
+
+/* company slider startsfrom here */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.lower-benifits {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+.lower-benifits h2 {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 700;
+  align-items: center;
+}
+.logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 0 0 0;
+  box-sizing: border-box;
 }
 
 .logo-slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    animation: slide 60s infinite linear;
-    position: relative;
-    z-index: 2;
-    min-width: 110%; /* Ensures each slide takes up full width */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  animation: slide 60s infinite linear;
+  position: relative;
+  z-index: 2;
+  min-width: 110%; /* Ensures each slide takes up full width */
 }
 
 .logo-slide img {
-    height: 3em;
-    margin: 0 2.7em;
-    white-space: nowrap;
+  height: 3em;
+  margin: 0 2.7em;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 650px) {
-    .b-cont{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .b-card{
-        max-width: 100%;
-    }
+  .b-cont {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .b-card {
+    max-width: 100%;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------Second Page CSS---------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.nav-wrapper {
 }

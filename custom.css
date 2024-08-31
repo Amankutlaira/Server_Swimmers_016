@@ -561,30 +561,31 @@ nav:hover {
   padding: 3.5rem 0;
 }
 
-.subSection{
+.subSection {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.owl-carousel.carousel_outer{
+.owl-carousel.carousel_outer {
   width: 1200px;
-    margin: auto;
+  margin: auto;
 }
 .owl-carousel.carousel_outer .owl-stage {
   /* height: 550px; */
   padding: 86px 0 86px 0;
-  box-shadow: rgba(255, 255, 255, 0.3) 105px 0px 60px -12px inset, rgba(255, 255, 255, 0.3) -105px 0px 60px 12px inset;
+  box-shadow: rgba(255, 255, 255, 0.3) 105px 0px 60px -12px inset,
+    rgba(255, 255, 255, 0.3) -105px 0px 60px 12px inset;
 }
-.buttonsCarousal{
+.buttonsCarousal {
   width: 100%;
   top: 0;
   height: 100%;
   z-index: 2;
   display: none;
 }
-.customNextBtn{
-  font-size:100px;
+.customNextBtn {
+  font-size: 100px;
   color: rgb(0, 162, 255);
   width: 195px;
   background: linear-gradient(270deg, #fff, hsla(0, 0%, 100%, 0));
@@ -592,7 +593,7 @@ nav:hover {
   display: flex;
   justify-content: center;
 }
-.customPrevBtn{
+.customPrevBtn {
   font-size: 100px;
   color: rgb(0, 162, 255);
   width: 195px;
