@@ -50,3 +50,53 @@ let rotateText = () => { debugger;
 
 rotateText();
 setInterval(rotateText, 4000);
+
+// script.js
+
+// Set the conference start date and time
+const conferenceStartDate = new Date("2024-12-01T09:00:00").getTime();
+
+// Function to update the countdown timer
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeLeft = conferenceStartDate - now;
+
+  if (timeLeft >= 0) {
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("hours").innerText = hours
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("minutes").innerText = minutes
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("seconds").innerText = seconds
+      .toString()
+      .padStart(2, "0");
+  } else {
+    clearInterval(countdownInterval);
+    document.getElementById("countdown").innerHTML =
+      "<span>The conference has started!</span>";
+  }
+}
+
+// Update the countdown every second
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Initial call to display countdown immediately on page load
+updateCountdown();
+
+// Simulating participant counter (this should be replaced with a real data fetch in a live environment)
+let participants = 150; // Example number of participants
+
+// Update the participant counter
+document.getElementById("participant-counter").innerText =
+  participants.toString();

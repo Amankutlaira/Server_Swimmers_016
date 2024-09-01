@@ -91,6 +91,38 @@
       </div>
       </div>
       </div>
+
+       <!-- Countdown Timer and Participant Counter -->
+    <div class="container-timer">
+      <div class="header-timer">
+        <h1>Tech Conference 2024</h1>
+        <p>Join us for an amazing tech experience!</p>
+      </div>
+
+      <section class="countdown-section">
+        <h2>Countdown to Conference Start</h2>
+        <div id="countdown" class="countdown-timer">
+          <div class="time-box">
+            <span id="days" class="time">00</span>
+            <span class="label-time">Days</span>
+          </div>
+          <div class="time-box">
+            <span id="hours" class="time">00</span>
+            <span class="label-time">Hours</span>
+          </div>
+          <div class="time-box">
+            <span id="minutes" class="time">00</span>
+            <span class="label-time">Minutes</span>
+          </div>
+          <div class="time-box">
+            <span id="seconds" class="time">00</span>
+            <span class="label-time">Seconds</span>
+          </div>
+        </div>
+      </section>
+
+      
+      
     </header>
     <script src="/js/scprit.js"></script>
 
@@ -99,85 +131,100 @@
     <!-- ======================================================================================== -->
 
     <!-- =======================================================================================  -->
-    <!-- =========================================           ==================================== -->
+    <!-- ========================================= Amaan Work Start here ==================================== -->
     <!-- ======================================================================================== -->
 
     <!-- main beniffits container starts here -->
     <div class="benifit-container">
       <!-- this the upper heading and main cards div -->
       <div class="upper-benifits">
-        <h2>Benifits of the Tech Confrences.</h2>
+        <!-- <h2 class="text-3xl font-bold text-center"></h2> -->
+        <h2 class="text-3xl font-bold fade-up">
+          The Most Featured Tech Confrences.
+        </h2>
 
         <!-- below div will store all cards content -->
-        <div class="b-cont">
+        <div
+          class="b-cont vanish my-10 container grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4"
+        >
           <!-- below is content for each card -->
           <div class="b-card">
             <!-- below will store all 3 overlaying content and images -->
             <div class="b-content">
               <div class="b-text">
-                <h3>In-Person Events</h3>
+                <h3>AI and Generative Models</h3>
                 <p>
-                  Power your events with badge printing, mobile app, event
-                  registration. Enjoy smooth entry with our NFC tech. Trusted
-                  with hosting real, live events since 2013.
+                  We explored the latest advancements in AI, focusing on
+                  generative models like GPT-4. Discussions revolved around
+                  their transformative impact across industries, ethical
+                  considerations, and the future potential of AI-driven
+                  innovation.
                 </p>
               </div>
               <div class="b-slider">
-                <h3>In-Person Events</h3>
+                <h3>AI and Generative Models</h3>
               </div>
             </div>
-            <button id="learn-btn">Learn more</button>
+           
+              <a id="learn-btn" href="/in-event-more-info.html" target="_blank">Learn more</a>
+    
           </div>
           <div class="b-card">
             <!-- below will store all 3 overlaying content and images -->
             <div class="b-content">
               <div class="b-text">
-                <h3>In-Person Events</h3>
+                <h3>Blockchain Technology</h3>
                 <p>
-                  Power your events with badge printing, mobile app, event
-                  registration. Enjoy smooth entry with our NFC tech. Trusted
-                  with hosting real, live events since 2013.
+                  This conference focused on the advancements in blockchain
+                  technology and its applications beyond cryptocurrency. Topics
+                  included blockchain's role in enhancing transparency,
+                  security, and efficiency across industries like supply chain,
+                  healthcare, and finance.
                 </p>
               </div>
               <div class="b-slider">
-                <h3>In-Person Events</h3>
+                <h3>Blockchain Technology</h3>
               </div>
             </div>
-            <button id="learn-btn">Learn more</button>
+            <a id="learn-btn" href="/in-event-more-info.html" target="_blank">Learn more</a>
           </div>
           <div class="b-card">
             <!-- below will store all 3 overlaying content and images -->
             <div class="b-content">
               <div class="b-text">
-                <h3>In-Person Events</h3>
+                <h3>Web3 and DeFi</h3>
                 <p>
-                  Power your events with badge printing, mobile app, event
-                  registration. Enjoy smooth entry with our NFC tech. Trusted
-                  with hosting real, live events since 2013.
+                  The conference centered on the evolution of Web3 and its
+                  impact on decentralized finance. We discussed how blockchain
+                  and decentralized applications are reshaping the internet,
+                  promoting user ownership and disrupting traditional financial
+                  systems.
                 </p>
               </div>
               <div class="b-slider">
-                <h3>In-Person Events</h3>
+                <h3>Web3 and DeFi</h3>
               </div>
             </div>
-            <button id="learn-btn">Learn more</button>
+            <a id="learn-btn" href="/in-event-more-info.html" target="_blank">Learn more</a>
           </div>
           <div class="b-card">
             <!-- below will store all 3 overlaying content and images -->
             <div class="b-content">
               <div class="b-text">
-                <h3>In-Person Events</h3>
+                <h3>Quantum Computing</h3>
                 <p>
-                  Power your events with badge printing, mobile app, event
-                  registration. Enjoy smooth entry with our NFC tech. Trusted
-                  with hosting real, live events since 2013.
+                  This conference delved into the breakthroughs in quantum
+                  computing, highlighting its potential to revolutionize
+                  cryptography, drug discovery, and complex problem-solving.
+                  Experts discussed the current state of quantum technology and
+                  its future implications.
                 </p>
               </div>
               <div class="b-slider">
-                <h3>In-Person Events</h3>
+                <h3>Quantum Computing</h3>
               </div>
             </div>
-            <button id="learn-btn">Learn more</button>
+            <a id="learn-btn" href="/in-event-more-info.html" target="_blank">Learn more</a>
           </div>
         </div>
       </div>
@@ -290,7 +337,6 @@
         </div>
       </div>
     </div>
-
     <!-- =======================================================================================  -->
     <!-- =========================================       END ==================================== -->
     <!-- ======================================================================================== -->
@@ -329,52 +375,53 @@
     <!-- =========================================   END  ==================================== -->
     <!-- ======================================================================================== -->
 
-  <!-- =======================================================================================  -->
-  <!-- =========================================  SARVAM  ==================================== -->
-  <!-- ======================================================================================== -->
+    <!-- =======================================================================================  -->
+    <!-- =========================================  SARVAM  ==================================== -->
+    <!-- ======================================================================================== -->
 
-  <div class="container  mx-auto px-4 section11">
-    <div class="subSection">
-      <h3>Run live meetings, face to face experiences, in-person events, or virtual webinars with the award winning
-        InEvent platform</h3>
+    <div class="container mx-auto px-4 section11">
+      <div class="subSection">
+        <h3>
+          Run live meetings, face to face experiences, in-person events, or
+          virtual webinars with the award winning InEvent platform
+        </h3>
 
-      <div class="owl-carousel carousel_outer owl-theme owl-loaded px-4">
-        <div class="owl-stage-outer">
-          <div class="owl-nav flex justify-between absolute buttonsCarousal sm:flex">
-            <div class=" customPrevBtn"> <i class="fa fa-light fa-angle-left" aria-hidden="true"></i> </div>
-            <div class=" customNextBtn"> <i class="fa fa-light fa-angle-right" aria-hidden="true"></i> </div>
-  
-          </div>
-          <div class="owl-stage">
-
-
-            <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 003852.png">
+        <div class="owl-carousel carousel_outer owl-theme owl-loaded px-4">
+          <div class="owl-stage-outer">
+            <div
+              class="owl-nav flex justify-between absolute buttonsCarousal sm:flex"
+            >
+              <div class="customPrevBtn">
+                <i class="fa fa-light fa-angle-left" aria-hidden="true"></i>
+              </div>
+              <div class="customNextBtn">
+                <i class="fa fa-light fa-angle-right" aria-hidden="true"></i>
+              </div>
             </div>
-            <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005411.png">
+            <div class="owl-stage">
+              <div class="owl-item flex">
+                <img src="./assets/images/Screenshot 2024-08-29 003852.png" />
+              </div>
+              <div class="owl-item flex">
+                <img src="./assets/images/Screenshot 2024-08-29 005411.png" />
+              </div>
+              <div class="owl-item flex">
+                <img src="./assets/images/Screenshot 2024-08-29 005424.png" />
+              </div>
+              <div class="owl-item flex">
+                <img src="./assets/images/Screenshot 2024-08-29 005432.png" />
+              </div>
+              <div class="owl-item flex">
+                <img src="./assets/images/Screenshot 2024-08-29 005448.png" />
+              </div>
+              <div class="owl-item flex">
+                <img src="./assets/images/Screenshot 2024-08-29 005503.png" />
+              </div>
             </div>
-            <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005424.png">
-            </div>
-            <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005432.png">
-            </div>
-            <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005448.png">
-            </div>
-            <div class="owl-item flex">
-              <img src="./assets/images/Screenshot 2024-08-29 005503.png">
-            </div>
-
           </div>
         </div>
-        
       </div>
-
-
     </div>
-  </div>
 
     <!-- =======================================================================================  -->
     <!-- =========================================    END   ==================================== -->
@@ -385,7 +432,7 @@
     <!-- ======================================================================================== -->
     <div class="social_parent">
       <div class="social_headline">Trusted by businesses, loved by people</div>
-      <div class="owl-carousel  owl-theme owl-loaded px-4 social_carousel">
+      <div class="owl-carousel owl-theme owl-loaded px-4 social_carousel">
         <div class="owl-stage-outer">
           <div class="owl-stage">
             <div class="owl-item flex">
@@ -397,7 +444,10 @@
                   Communications
                 </div>
                 <div class="comma">
-                  <i class="fa-solid fa-quote-left fa-2xl" style="color: #a6d1f2"></i>
+                  <i
+                    class="fa-solid fa-quote-left fa-2xl"
+                    style="color: #a6d1f2"
+                  ></i>
                 </div>
                 <div class="social_description">
                   InEvent. We are very happy
@@ -429,11 +479,14 @@
                 <div id="name">Daniel Pearce</div>
                 <div>CEO at TTG Media</div>
                 <div class="comma">
-                  <i class="fa-solid fa-quote-left fa-2xl" style="color: #a6d1f2"></i>
+                  <i
+                    class="fa-solid fa-quote-left fa-2xl"
+                    style="color: #a6d1f2"
+                  ></i>
                 </div>
                 <div class="social_description">
-                  We're really enjoying using the platform and have definitely been
-                  impressed by the customer service!
+                  We're really enjoying using the platform and have definitely
+                  been impressed by the customer service!
                 </div>
                 <div class="comma end">
                   <i
@@ -456,7 +509,10 @@
                 <div id="name">Alexandre Le Coq</div>
                 <div>Global Communications Director at Infovista</div>
                 <div class="comma">
-                  <i class="fa-solid fa-quote-left fa-2xl" style="color: #a6d1f2"></i>
+                  <i
+                    class="fa-solid fa-quote-left fa-2xl"
+                    style="color: #a6d1f2"
+                  ></i>
                 </div>
                 <div class="social_description">
                   Our engagement has dramatically improved, and so also our events.
@@ -488,12 +544,15 @@
                 <div id="name">Koteshwar Lankadasu</div>
                 <div>Director Operations and Marketing at Coca-Cola</div>
                 <div class="comma">
-                  <i class="fa-solid fa-quote-left fa-2xl" style="color: #a6d1f2"></i>
+                  <i
+                    class="fa-solid fa-quote-left fa-2xl"
+                    style="color: #a6d1f2"
+                  ></i>
                 </div>
                 <div class="social_description">
                   It was great to work together with the InEvent team! The whole
-                  experience was great, including coming down here and helping us out
-                  with everything.
+                  experience was great, including coming down here and helping
+                  us out with everything.
                 </div>
                 <div class="comma end">
                   <i
@@ -516,7 +575,10 @@
                 <div id="name">Chris Repetti</div>
                 <div>Events Manager and Video Producer at Sony</div>
                 <div class="comma">
-                  <i class="fa-solid fa-quote-left fa-2xl" style="color: #a6d1f2"></i>
+                  <i
+                    class="fa-solid fa-quote-left fa-2xl"
+                    style="color: #a6d1f2"
+                  ></i>
                 </div>
                 <div class="social_description">
                   The platform we used before InEvent met the need for the moment ...
@@ -544,12 +606,15 @@
                 <div id="name">Karyna V. Nardelli</div>
                 <div>Director Santander</div>
                 <div class="comma">
-                  <i class="fa-solid fa-quote-left fa-2xl" style="color: #a6d1f2"></i>
+                  <i
+                    class="fa-solid fa-quote-left fa-2xl"
+                    style="color: #a6d1f2"
+                  ></i>
                 </div>
                 <div class="social_description">
-                  It was great to work with you (InEvent), you supported us a lot. It
-                  made our lives a lot easier and it was an honor, we are very happy.
-                  Thank you!
+                  It was great to work with you (InEvent), you supported us a
+                  lot. It made our lives a lot easier and it was an honor, we
+                  are very happy. Thank you!
                 </div>
                 <div class="comma end">
                   <i class="fa-solid fa-quote-left fa-flip-horizontal fa-2xl"
@@ -573,55 +638,55 @@
         </div>
       </div>
       </div>
-    </div>
-    
-    <div class="container">
+      </div>
     </div>
 
-  <!-- =======================================================================================  -->
-  <!-- =========================================     END      ==================================== -->
-  <!-- ======================================================================================== -->
+    <div class="container"></div>
+
+    <!-- =======================================================================================  -->
+    <!-- =========================================     END      ==================================== -->
+    <!-- ======================================================================================== -->
 
 
 
 
-  <script src="/assets/lib/jquery.min.js"></script>
-  <script src="/assets/lib/owlCarousel/owl.carousel.min.js"></script>
-  <script>
-    $('.carousel_outer').owlCarousel({
-      center: true,
-      items: 1,
-      loop: true,
-      margin: 20,
-      dots: false,
-      autoplay: true,
-      responsive: {
-        0:{
-          items: 2
+    <script src="/assets/lib/jquery.min.js"></script>
+    <script src="/assets/lib/owlCarousel/owl.carousel.min.js"></script>
+    <script>
+      $(".carousel_outer").owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        margin: 20,
+        dots: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
         },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 5
-        }
-      }
-    });
-    var owl = $('.carousel_outer');
-    $('.customNextBtn').click(function () {
-      owl.trigger('next.owl.carousel');
-    })
-    $('.customPrevBtn').click(function () {
-      owl.trigger('prev.owl.carousel', [300]);
-    })
-    $('.social_carousel').owlCarousel({
-      center: true,
-      items: 1,
-      loop: true,
-      margin: 20,
-      dots: false,
-      autoplay: true,
-      responsive: {
+      });
+      var owl = $(".carousel_outer");
+      $(".customNextBtn").click(function () {
+        owl.trigger("next.owl.carousel");
+      });
+      $(".customPrevBtn").click(function () {
+        owl.trigger("prev.owl.carousel", [300]);
+      });
+      $(".social_carousel").owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        margin: 20,
+        dots: false,
+        autoplay: true,
+        responsive: {
         0:{
           items: 1
         },
@@ -632,8 +697,31 @@
           items: 3
         }
       }
-    });
-  </script>
-</body>
+      });
+    </script>
+    <!---------------------------------------------------------------------------->
+    <!--------------------------Amaan Script Start Here--------------------------->
+    <!---------------------------------------------------------------------------->
+    <script>
+      const view_animation = (cur_state, animate) => {
+        document.addEventListener("DOMContentLoaded", function () {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.remove(`${cur_state}`);
+                entry.target.classList.add(`${animate}`);
+                observer.unobserve(entry.target); // Stop observing once it's in view
+              }
+            });
+          });
 
+          document.querySelectorAll(`.${cur_state}`).forEach((element) => {
+            observer.observe(element);
+          });
+        });
+      };
+      view_animation("fade-up", "animate-fadeUp");
+      view_animation("vanish", "animate-appear");
+    </script>
+  </body>
 </html>
