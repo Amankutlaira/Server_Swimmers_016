@@ -283,6 +283,7 @@ hr {
 /* ----------------------------------------------------------------------- */
 
 
+
 /* nav bar */
 .navBar{
   width: 100%;
@@ -706,4 +707,4 @@ box-sizing: border-box;
     justify-items: center; /* Center items horizontally */
     align-items: center; 
   } 
-}
+
