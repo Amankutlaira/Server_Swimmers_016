@@ -431,7 +431,9 @@ hr{
   padding: 20px;
 }
 
-
+.align-logo{
+  align-items: flex-start;
+}
 
 
 
