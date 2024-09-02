@@ -1,0 +1,160 @@
+
+.social_headline {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.social_cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    margin-top: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 15px;
+    height: 570px !important;
+}
+
+.social_cards:hover {
+    background: rgb(175, 239, 218);
+    transform: scale(1.05);
+}
+
+
+.social_cards #name{
+    font-size: x-large;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.667);
+}
+
+.social_cards>img {
+    border-radius: 50%;
+    width: 100px !important;
+    position: relative;
+    bottom: 50px;
+
+}
+
+.social_cards div {
+    margin-top: 10px;
+}
+
+.comma{
+    margin-top: 20px;
+}
+.comma.end {
+    text-align: end;
+}
+.social_cards #logo {
+    margin-top: 30px;
+} 
+
+.social_cards #logo img {
+    width: 100px !important;
+}
+
+.social_parent button {
+    font-size: x-large;
+    font-weight: 700;
+    padding: 15px;
+    margin:50px;
+    /* background-color: rgb(78, 87, 166); */
+    /* border: none; */
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.social_parent button:hover{
+    background-color: #000000;
+    color: #fff;
+}
+
+
+
+
+/* ---------------------------------------------------------- 
+                Second Page
+-----------------------------------------------------------*/
+.review_container {
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 68%;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    /* background-color: #d5ece7; */
+    
+}
+
+.topic_content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: auto;
+
+}
+
+.topic_head {
+    font-size: 40px;
+    font-weight: bold;
+    color: blue;
+    padding: 15px;
+    /* text-align: start; */
+}
+
+.topic_desc {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 15px;
+}
+
+.review_container video {
+    border-radius:12px;
+}
+
+.foot {
+    font-size: 60px;
+    text-align: center;
+    padding: 20px 50px;
+    border-radius: 12px;
+    background-color: #0c4456;
+    color: #fff;
+}
+
+.foot button {
+    font-size: x-large;
+    font-weight: 700;
+    padding: 15px;
+    margin-top: 50px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 12px;
+}
+
+
+.list_part {
+    text-align: left;
+    padding: 20px;
+}
+
+.list_part ul {
+    display: inline-block;
+    text-align: left;
+    list-style:disc ;
+}
+
+
