@@ -85,7 +85,7 @@ hr {
   padding: 0.5em;
   box-sizing: border-box;
   margin-top: 2em;
-  height: 38em;
+  height: 35em;
   display: flex;
   flex-direction: column;
 }
@@ -121,23 +121,7 @@ hr {
   visibility: hidden; /* Initially hidden */
   transition: opacity 1s ease, visibility 0.8s ease; /* Smooth transition for both appearance and disappearance */
 }
-@media screen and (max-width: 770px) {
-  .b-text {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Make it visible */
-  }
-  .b-content .b-slider {
-    top: 98%;
-    background-color: rgb(59, 158, 230);
-  }
-  .upper-benifits .head-fade {
-    text-align: center;
-    font-size: 1.6em;
-  }
-  .b-card #learn-btn {
-    background-color: rgb(59, 158, 230);
-  }
-}
+
 .b-content:hover .b-text {
   opacity: 1; /* Fully visible */
   visibility: visible; /* Make it visible */
@@ -275,6 +259,36 @@ hr {
   }
   .b-card {
     max-width: 100%;
+  }
+  .b-content {
+    height: 60%;
+  }
+  .b-text p{
+    font-size: 1em;
+  }
+  .benifit-container {
+    padding: 0em;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .b-text {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+  }
+  .b-content .b-slider {
+    top: 98%;
+    background-color: rgb(59, 158, 230);
+  }
+  .upper-benifits .head-fade {
+    text-align: center;
+    font-size: 1.6em;
+  }
+  .b-card #learn-btn {
+    background-color: rgb(59, 158, 230);
+  }
+  .logos{
+    margin-bottom: 2em;
   }
 }
 
@@ -415,14 +429,14 @@ hr {
   padding: 1em .7em ;
   text-align: center;
   border-radius: 40px;
-  border: 3px solid tomato;
-  background-color:white;
-  color: tomato;
+  border: 3px solid rgb(14 165 233);
+  background-color:rgb(143, 195, 219);
+  color:black;
   font-weight: 700;
   transition: background-color .4s ease-out 
 }
 .button-section > a:hover{
-  background-color: tomato;
+  background-color: rgb(14 165 233);
   color: white;
   cursor: pointer;
 }
@@ -451,7 +465,7 @@ padding: .5em;
 box-sizing: border-box;
 }
 .sec1 .sec1-wrapper{
-  width: auto;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -460,7 +474,7 @@ box-sizing: border-box;
   padding: 2em 4em;
 }
 .sec1 .sec1-wrapper> p{
-  width: 80%;
+  width: auto;
   letter-spacing: 2px;
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -599,33 +613,40 @@ box-sizing: border-box;
   max-width: 100%;
   font-size: 1.8em;
   font-weight: 600;
-
+  
 }
 .counter-wrapper{
   width: auto;
   max-width: 100%;
-  gap:4em;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+  gap:10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .counter-wrapper .counter-card{
   background-color:rgba(255,  255, 255,.5);
+  width: auto;
+  margin-bottom: .7em;
   padding: 1em 3em;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   
 }
-.counter-card img{
-  width: auto;
-  max-width: 100%;
-  margin : .5em
-}
-.counter-card span{
+.count-bunny{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   display: inline-block;
   width: 100%;
   text-align: center;
   font-size: 3.2em;
+}
+.counter-card img{
+  width: auto;
+  max-width: 100%;
+  margin : .5em
 }
 .counter-card p{
   text-align: center;
@@ -633,6 +654,77 @@ box-sizing: border-box;
   color: rgb(151, 137, 137);
 }
 
+/* Speaker Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  min-width: 100%; /* Each slide takes up 100% of the container */
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Speaker - Slider */
+.slider-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.slider-wrapper{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  padding: .3em;
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid teal;
+  flex-wrap: wrap;
+}
+.slider-wrapper h2{
+  text-align: center;
+  line-height: 1em;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.slide{
+  display: flex;
+  
+}
+.slide-wrap{
+  display: flex;
+}
+
+.speaker-img img{
+  height: 10em;
+}
+
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* ----------------------------Media Query--------------------------- */
+/* ------------------------------------------------------------------ */
 
 @media (max-width: 1020px) {
   .benifit-container{
@@ -667,6 +759,9 @@ box-sizing: border-box;
     justify-items: center; /* Center items horizontally */
     align-items: center; 
   } 
+  .sec1 .sec1-wrapper> p{
+    line-height: 1em;
+  }
   .button-section{
     width: auto;
     padding: 2em;
@@ -677,15 +772,7 @@ box-sizing: border-box;
     grid-template-rows: repeat(3,1fr);
   }
   .v-overview-wrapper{
-    /* width: auto;
-    display: flex; */
     flex-direction: column;
-    /* position: relative;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    padding: 1em 0;
-    box-sizing: border-box; */
   }
 }
 
@@ -706,6 +793,9 @@ box-sizing: border-box;
     justify-items: center; /* Center items horizontally */
     align-items: center; 
   } 
+  .sec1 .sec1-wrapper> p{
+    font-size: 1em;
+  }
   
 }
 
