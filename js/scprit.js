@@ -18,7 +18,7 @@ let currentWordIndex = 0;
 let maxWordIndex = words.length - 1;
 words[currentWordIndex].style.opacity = "1";
 
-let rotateText = () => { debugger;
+let rotateText = () => { 
   let currentWord = words[currentWordIndex];
   let nextWord =
     currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
@@ -48,7 +48,7 @@ let rotateText = () => { debugger;
   
 };
 
-rotateText();
+// rotateText();
 setInterval(rotateText, 4000);
 
 // script.js
@@ -98,5 +98,131 @@ updateCountdown();
 let participants = 150; // Example number of participants
 
 // Update the participant counter
-document.getElementById("participant-counter").innerText =
-  participants.toString();
+// document.getElementById("participant-counter").innerText =
+//   participants.toString();
+
+
+
+
+
+
+
+  // ===================================================================================
+  // nav bar toggling
+const navBarE1 = document.querySelector(".navBar");
+const navLinks = document.querySelectorAll(".nav-links");
+window.addEventListener("scroll", () => {debugger;
+
+    let theme = document.getElementsByClassName('dark')
+    let colorLogo = document.getElementsByClassName('logo')
+    let colorNav = "white"
+    let filterLogoProp="brightness(0) invert(0)"
+    if (theme.length == 0){
+      colorNav = "black"
+      filterLogoProp = "brightness(0) invert(0)"
+    }
+    else{
+      colorNav = "white"
+      filterLogoProp = "brightness(0) invert(1)"
+    }
+    if (window.scrollY > 0) {
+        navBarE1.classList.add("active");
+        navLinks.forEach(link => {
+            link.style.color = colorNav;
+            // colorLogo[0].style.filter = filterLogoProp
+
+        });
+    } else {
+        navBarE1.classList.remove("active");
+        navLinks.forEach(link => {
+            link.style.color = "white";
+        });
+    }
+});
+
+// responsice toggling
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const menu = document.querySelector('.mobile-menu');
+  menu.classList.toggle('open');
+});
+
+// counter
+document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll('.count-text');
+
+    const counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const speed = 200; // Adjust speed here
+
+                const updateCount = () => {
+                    const current = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(updateCount, 10); // Adjust timeout for smoother/faster counting
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+                counterObserver.unobserve(counter); // Stop observing after the count is done
+            }
+        });
+    });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+});
+
+$(".carousel_outer").owlCarousel({ 
+  center: true,
+  items: 1,
+  loop: true,
+  margin: 20,
+  dots: false,
+  autoplay: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    768: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+    },
+  },
+});
+var owl = $(".carousel_outer");
+$(".customNextBtn").click(function () {
+  owl.trigger("next.owl.carousel");
+});
+$(".customPrevBtn").click(function () {
+  owl.trigger("prev.owl.carousel", [300]);
+});
+$(".social_carousel").owlCarousel({
+  center: true,
+  items: 1,
+  loop: true,
+  margin: 20,
+  dots: false,
+  autoplay: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+
+});

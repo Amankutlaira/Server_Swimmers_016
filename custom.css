@@ -119,7 +119,7 @@ nav:hover {
   z-index: 2;
   font-family: "Open Sans", sans-serif;
   display: inline-block;
-  background: radial-gradient(circle, #147199 0, #04153a 65%, #308cb4 100%);
+  background: radial-gradient(circle, #7fc8e7 0, #3f578b 65%, #477c93 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -237,7 +237,7 @@ nav:hover {
   height: 20%;
   max-width: 800px;
   text-align: center;
-  z-index: 2;
+  z-index: 200;
 }
 
 .header-timer h1 {
@@ -592,7 +592,7 @@ nav:hover {
   justify-content: center;
 }
 .owl-carousel.carousel_outer {
-  width: 1200px;
+  /* width: 1200px; */
   margin: auto;
 }
 .owl-carousel.carousel_outer .owl-stage {
@@ -642,9 +642,9 @@ nav:hover {
 footer{
   color: #fff;
   background-image: linear-gradient(90deg, rgb(131, 146, 163) 0%, rgb(23, 50, 70) 100%);
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   top:350px;
   border-top-left-radius: 70px;
   font-size: 0.8rem;
@@ -703,7 +703,7 @@ footer{
 .main{
   margin: 50px;
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   display: grid;
   gap: 50px;
   grid-template-columns: repeat(4, 1fr );
@@ -847,4 +847,9 @@ hr{
   align-items: flex-start;
 }
 
+
+.dark .navBar.active{
+  background-color: black;
+  color: white;
+}
 
