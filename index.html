@@ -40,21 +40,43 @@
         <source src="/assets/images/homepage-hero-bg-video.mp4" />
       </video>
 
-      <nav>
-        <div class="logo">
-          <img src="/assets/images/logo.png" alt="LOGO" />
-          <span>TechPulse®</span>
+      <div class="navBar flex flex-row justify-center items-center">
+        <div class="nav-wrapper container h-20 flex flex-row items-center justify-around sm:bg-contain md:bg-cover lg:bg-cover">
+          <a class="mr-16" href="#"
+            ><img class="logo h-12" src="./assets/images/logo.png" alt=""
+          /></a>
+          <ul  class="flex flex-row justify-center items-center text-base font-semibold">
+            <li>
+              <a class="nav-links" href="#">Solution<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a class="nav-links" href="#">Product<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a class="nav-links" href="#">Resources<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a class="nav-links" href="#">Company<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li><a class="nav-links" href="#">Pricing</a></li>
+            <li><a class="bg-sky-500 text-white px-4 py-3 hover:bg-sky-600 rounded-lg"  href="#">Book a meeting</a></li>
+            <li><a class="nav-links" href="#">Login</a></li>
+          </ul>
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Solutions</a></li>
+      </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#">Solution</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">Resources</a></li>
           <li><a href="#">Company</a></li>
           <li><a href="#">Pricing</a></li>
-          <li><a href="#" class="meeting-button">Book a Meeting</a></li>
           <li><a href="#">Login</a></li>
         </ul>
-      </nav>
+      </div>
       <div class="hero-p">
         <p class="hero-head">Event Management <br />Software for</p>
         <p>
@@ -113,7 +135,7 @@
       <!-- this the upper heading and main cards div -->
       <div class="upper-benifits">
         <!-- <h2 class="text-3xl font-bold text-center"></h2> -->
-        <h2 class="text-3xl font-bold fade-up">
+        <h2 class="text-3xl font-bold fade-up text-center">
           The Most Featured Tech Confrences.
         </h2>
 
@@ -696,6 +718,30 @@
       };
       view_animation("fade-up", "animate-fadeUp");
       view_animation("vanish", "animate-appear");
+
+      // nav bar toggling
+const navBarE1 = document.querySelector(".navBar");
+const navLinks = document.querySelectorAll(".nav-links");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+        navBarE1.classList.add("active");
+        navLinks.forEach(link => {
+            link.style.color = "black";
+        });
+    } else {
+        navBarE1.classList.remove("active");
+        navLinks.forEach(link => {
+            link.style.color = "white";
+        });
+    }
+});
+
+// responsice toggling
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const menu = document.querySelector('.mobile-menu');
+  menu.classList.toggle('open');
+});
+
     </script>
   </body>
 </html>
