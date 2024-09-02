@@ -129,70 +129,6 @@ Stay tuned for #GenAI2025
         </div>
       </div>
     </section>
-
-    <!-- spaekaer slider -->
-
-        <!-- <div class="slider-container">
-            <div class=" container slider-wrapper">
-            <h2>Meet the Past Generative AI Summit 2024 Confirmed Speakers:</h2>
-            <div class="slide-wrap">
-            <div class="slide">
-              <div class="speaker-card">
-                <div class="speaker-img">
-                  <img src="https://eco-cdn.iqpc.com/eco/images/speakers/7oE6jT3nYkgMSFpKG1EsWWSN5oIClDDqZQQwP83g.png" alt="">
-                  <img src="https://eco-cdn.iqpc.com/eco/images/speaker_companies/UJ98hiUSdc6kiMxVDegQKdOpc6gfWZETdlBqWlMO.png" alt="">
-                </div>
-                <p class="speaker-name">Amaan Ali</p>
-                <p class="speaker-desg">Data Scientist</p>
-                <p class="speaker-c-name">YAhoo!</p>
-              </div>
-              <div class="speaker-card"><div class="speaker-img">
-                <img src="https://eco-cdn.iqpc.com/eco/images/speakers/7oE6jT3nYkgMSFpKG1EsWWSN5oIClDDqZQQwP83g.png" alt="">
-                <img src="https://eco-cdn.iqpc.com/eco/images/speaker_companies/UJ98hiUSdc6kiMxVDegQKdOpc6gfWZETdlBqWlMO.png" alt="">
-              </div>
-              <p class="speaker-name">Amaan Ali</p>
-              <p class="speaker-desg">Data Scientist</p>
-              <p class="speaker-c-name">YAhoo!</p></div>
-              <div class="speaker-card"><div class="speaker-img">
-                <img src="https://eco-cdn.iqpc.com/eco/images/speakers/7oE6jT3nYkgMSFpKG1EsWWSN5oIClDDqZQQwP83g.png" alt="">
-                <img src="https://eco-cdn.iqpc.com/eco/images/speaker_companies/UJ98hiUSdc6kiMxVDegQKdOpc6gfWZETdlBqWlMO.png" alt="">
-              </div>
-              <p class="speaker-name">Amaan Ali</p>
-              <p class="speaker-desg">Data Scientist</p>
-              <p class="speaker-c-name">YAhoo!</p></div>
-              <div class="speaker-card"><div class="speaker-img">
-                <img src="https://eco-cdn.iqpc.com/eco/images/speakers/7oE6jT3nYkgMSFpKG1EsWWSN5oIClDDqZQQwP83g.png" alt="">
-                <img src="https://eco-cdn.iqpc.com/eco/images/speaker_companies/UJ98hiUSdc6kiMxVDegQKdOpc6gfWZETdlBqWlMO.png" alt="">
-              </div>
-              <p class="speaker-name">Amaan Ali</p>
-              <p class="speaker-desg">Data Scientist</p>
-              <p class="speaker-c-name">YAhoo!</p></div>
-            </div>
-            <div class="slide">
-              <div class="speaker-card">Card 5</div>
-              <div class="speaker-card">Card 6</div>
-              <div class="speaker-card">Card 7</div>
-              <div class="speaker-card">Card 8</div>
-            </div>
-            <div class="slide">
-              <div class="speaker-card">Card 1</div>
-              <div class="speaker-card">Card 2</div>
-              <div class="speaker-card">Card 3</div>
-              <div class="speaker-card">Card 4</div>
-            </div>
-            <div class="slide">
-              <div class="speaker-card">Card 5</div>
-              <div class="speaker-card">Card 6</div>
-              <div class="speaker-card">Card 7</div>
-              <div class="speaker-card">Card 8</div>
-            </div>
-          </div>
-        <a href="#">VIEW THE COMPLETE SPEAKER SECTION</a>
-      </div>
-    </div>
-     -->
-
-
     <script>
 // nav bar toggling
 const navBarE1 = document.querySelector(".navBar");
@@ -252,25 +188,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // slider functionality
-// const sliderWrapper = document.querySelector('.slider-wrapper');
-// const slides = document.querySelectorAll('.slide');
+const sliderWrapper = document.querySelector('.slider-wrapper');
+const slides = document.querySelectorAll('.slide');
 
-// let currentIndex = 0;
+let currentIndex = 0;
 
-// function updateSliderPosition() {
-//   sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-// }
+function updateSliderPosition() {
+  sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-// function autoSlide() {
-//   currentIndex++;
-//   if (currentIndex >= slides.length) {
-//     currentIndex = 0; // Reset to the first slide
-//   }
-//   updateSliderPosition();
-// }
+function autoSlide() {
+  currentIndex++;
+  if (currentIndex >= slides.length) {
+    currentIndex = 0; // Reset to the first slide
+  }
+  updateSliderPosition();
+}
 
-// // Automatically slide every 2 seconds
-// setInterval(autoSlide, 2000);
+// Automatically slide every 2 seconds
+setInterval(autoSlide, 2000);
 
     </script>
   </body>
