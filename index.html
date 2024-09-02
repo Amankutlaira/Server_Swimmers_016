@@ -22,45 +22,49 @@
   <!-- =======================================================================================  -->
   <!-- =========================================  Aman ======================================== -->
   <!-- ======================================================================================== -->
+
   <header>
+    <div class="navBar flex flex-row justify-center items-center">
+      <div class="nav-wrapper container h-20 flex flex-row items-center justify-around sm:bg-contain md:bg-cover lg:bg-cover">
+        <a class="mr-16" href="#"
+          ><img class="logo h-12" src="./assets/images/logo.png" alt=""
+        /></a>
+        <ul  class="flex flex-row justify-center items-center text-base font-semibold">
+          <li>
+            <a class="nav-links" href="#">Solution<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a class="nav-links" href="#">Product<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a class="nav-links" href="#">Resources<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a class="nav-links" href="#">Company<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li><a class="nav-links" href="#">Pricing</a></li>
+          <li><a class="bg-sky-500 text-white px-4 py-3 hover:bg-sky-600 rounded-lg"  href="#">Book a meeting</a></li>
+          <li><a class="nav-links" href="#">Login</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
     <video autoplay loop muted plays-inline id="bckgrd-video">
       <source src="/assets/images/homepage-hero-bg-video.mp4" />
     </video>
-
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet" />
-      <link rel="stylesheet" href="/custom.css" />
-      <link rel="stylesheet" href="/benifits.css">
-      <!-- <link rel="stylesheet" href="shivam.css" />   -->
-      <link rel="stylesheet" href="/assets/lib/owlCarousel/owl.carousel.min.css">
-      <link rel="stylesheet" href="/assets/lib/owlCarousel/owl.theme.default.min.css">
-      <script src="https://kit.fontawesome.com/64693c933a.js" crossorigin="anonymous"></script>
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    </head>
-
-
-    <nav>
-      <div class="logo">
-        <img src="/assets/images/logo.png" alt="LOGO" />
-        <span>TechPulse®</span>
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#">Solution</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
       </div>
-      <ul class="nav-links">
-        <li><a href="#">Solutions</a></li>
-        <li><a href="#">Product</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Company</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#" class="meeting-button">Book a Meeting</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </nav>
-    <!-- <div class="hero-p">
+      <div class="hero-p">
         <p class="hero-head">Event Management <br />Software for</p>
         <p>
           <span class="word w-1">Live Events</span>
@@ -69,7 +73,7 @@
           <span class="word w-4">Virtual Events</span>
           <span class="word w-5">In-Person Events</span>
         </p>
-      </div> -->
+      </div> 
 
     <div style="position: absolute;
       z-index: 3;
@@ -139,14 +143,14 @@
   <!-- ========================================= Amaan Work Start here ==================================== -->
   <!-- ======================================================================================== -->
 
-  <!-- main beniffits container starts here -->
-  <div class="benifit-container">
-    <!-- this the upper heading and main cards div -->
-    <div class="upper-benifits">
-      <!-- <h2 class="text-3xl font-bold text-center"></h2> -->
-      <h2 class="text-3xl font-bold fade-up">
-        The Most Featured Tech Confrences.
-      </h2>
+    <!-- main beniffits container starts here -->
+    <div class="benifit-container">
+      <!-- this the upper heading and main cards div -->
+      <div class="upper-benifits">
+        <!-- <h2 class="text-3xl font-bold text-center"></h2> -->
+        <h2 class="text-3xl font-bold fade-up text-center">
+          The Most Featured Tech Confrences.
+        </h2>
 
       <!-- below div will store all cards content -->
       <div class="b-cont vanish my-10 container grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
@@ -565,121 +569,55 @@
           items: 3
         }
       }
+      });
+    </script>
+    <!---------------------------------------------------------------------------->
+    <!--------------------------Amaan Script Start Here--------------------------->
+    <!---------------------------------------------------------------------------->
+    <script>
+      const view_animation = (cur_state, animate) => {
+        document.addEventListener("DOMContentLoaded", function () {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.remove(`${cur_state}`);
+                entry.target.classList.add(`${animate}`);
+                observer.unobserve(entry.target); // Stop observing once it's in view
+              }
+            });
+          });
 
-    });
-  </script>
-  <!---------------------------------------------------------------------------->
-  <!--------------------------Amaan Script Start Here--------------------------->
-  <!---------------------------------------------------------------------------->
-  <script>
-    const view_animation = (cur_state, animate) => {
-      document.addEventListener("DOMContentLoaded", function () {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.remove(`${cur_state}`);
-              entry.target.classList.add(`${animate}`);
-              observer.unobserve(entry.target); // Stop observing once it's in view
-            }
+          document.querySelectorAll(`.${cur_state}`).forEach((element) => {
+            observer.observe(element);
           });
         });
-        document.querySelectorAll(`.${cur_state}`).forEach((element) => {
-          observer.observe(element);
+      };
+      view_animation("fade-up", "animate-fadeUp");
+      view_animation("vanish", "animate-appear");
+
+      // nav bar toggling
+const navBarE1 = document.querySelector(".navBar");
+const navLinks = document.querySelectorAll(".nav-links");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+        navBarE1.classList.add("active");
+        navLinks.forEach(link => {
+            link.style.color = "black";
         });
-      });
-    };
-    view_animation("fade-up", "animate-fadeUp");
-    view_animation("vanish", "animate-appear");
-  </script>
+    } else {
+        navBarE1.classList.remove("active");
+        navLinks.forEach(link => {
+            link.style.color = "white";
+        });
+    }
+});
 
+// responsice toggling
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const menu = document.querySelector('.mobile-menu');
+  menu.classList.toggle('open');
+});
 
-  <!-- Footer-section -->
-
-  <div class="reset">
-    <main class="main-section">
-
-    </main>
-
-    <footer class="footer-sec">
-      <div class="main">
-
-        <div class="logo row flex-col align-logo">
-          <div class="footer-header">
-            <img src="assets\images\logo.png" class="footer-logo" alt="">
-          </div>
-          <div class="logo-des">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, harum est. Delectus libero dignissimos
-              ex laudantium obcaecati ullam ab? Voluptatum pariatur inventore facilis tenetur sunt magni minima aperiam
-              voluptate nobis!.</p>
-
-            <a href="#" class="btn-know">Know More</a>
-          </div>
-
-        </div>
-
-
-
-        <div class="office row">
-          <div class="footer-header">
-            <h3>Office</h3>
-          </div>
-          <div class="office-des">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto repudiandae nesciunt qui hic impedit
-              at temporibus illo nostrum eos omnis quas deserunt natus incidunt placeat similique soluta debitis,
-              suscipit voluptates. </p>
-            <a href="#">footer@gmail.com</a>
-            <p class="num">+91-9999999999</p>
-          </div>
-        </div>
-
-        <div class="link row">
-          <div class="footer-header">
-            <h3>Links</h3>
-          </div>
-
-          <div class="link-des">
-            <a href="#" class="footer-links">Home</a>
-            <a href="#" class="footer-links">About</a>
-            <a href="#" class="footer-links">Services</a>
-            <a href="#" class="footer-links">Gallery</a>
-            <a href="#" class="footer-links">Contact</a>
-          </div>
-
-        </div>
-
-
-        <div class="newsletter row">
-          <div class="footer-header">
-            <h3>Newsletter</h3>
-          </div>
-          <div class="newsletter-des">
-            <div class="subscribe"><i class="sub-icon ri-mail-check-fill"></i>
-              <input type="mail" placeholder="Enter Email ID" required>
-              <i class="sub-icon ri-arrow-right-line"></i>
-            </div>
-            <div class="icons">
-              <a href="#"><i class="social-icon ri-facebook-fill"></i></a>
-              <a href="#"><i class="social-icon ri-instagram-line"></i></a>
-              <a href="#"><i class="social-icon ri-linkedin-fill"></i></a>
-              <a href="#"><i class="social-icon ri-github-line"></i></a>
-
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="copyright">
-        <hr>
-
-        <p>© Copyright 2024 Techpulse</p>
-      </div>
-    </footer>
-  </div>
-
-
-
-
-</body>
-
+    </script>
+  </body>
 </html>
