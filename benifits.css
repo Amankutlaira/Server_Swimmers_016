@@ -710,11 +710,7 @@ box-sizing: border-box;
 .slide-wrap{
   display: flex;
 }
-.slide-wrap .slide .speaker-card{
-  border: 1px crimson solid;
-  display: flex;
 
-}
 .speaker-img img{
   height: 10em;
 }
